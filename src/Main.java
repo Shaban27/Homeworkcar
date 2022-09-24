@@ -11,7 +11,7 @@ public class Main {
                 + " год выпуска " + lada.productionYear + " сборка в " + lada.productionCountry
                 + " цвет " + lada.color + "  объем двигателя - " + lada.engineVolume);
 
-        System.out.println("Марка автомобиля " + audi.brand + "модель " + audi.model
+        System.out.println("Марка автомобилzя " + audi.brand + "модель " + audi.model
                 + " год выпуска " + audi.productionYear + " сборка в " + audi.productionCountry
                 + " цвет " + audi.color + "  объем двигателя  " + audi.engineVolume + " литра");
 
