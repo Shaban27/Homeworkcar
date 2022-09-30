@@ -1,32 +1,26 @@
+import transport.Car;
+
 public class Main {
 
     public static void main(String[] args) {
-        Car lada = new Car("Lada ", "Grande", "1,7", null, "2015", "России");
+        Car lada = new Car("Lada ", "Grande", "1.7", null, "2015", "России"); lada.setRegistrationNumber("х005000х");
         Car audi = new Car("Audi ", null, "3,0", "черный", "2020", "Германии");
-        Car bmw = new Car("BMW", "Z8", "3,0", "черный", "2021", "Германии");
-        Car kia = new Car("Kia ","Sportage 4 поколение","1.6","красный","2018","Южной Корее");
-        Car hyundai = new Car(null,"Avante ","1,6","оранжевый","2016", null);
+        Car bmw = new Car("BMW", "Z8", "3,0", "черный", "2021", "Германии");bmw.getNumberOfSeats();
+        Car kia = new Car("Kia ", "Sportage 4 поколение", "1.6", "красный", "2018", "Южной Корее");
+        Car hyundai = new Car(null, "Avante ", "1,6", "оранжевый", "2016", null);
 
-        System.out.println("Марка автомобиля " + lada.brand + "модель " + lada.model
-                + " год выпуска " + lada.productionYear + " сборка в " + lada.productionCountry
-                + " цвет " + lada.color + "  объем двигателя - " + lada.engineVolume);
+        printInfo(lada);
+        printInfo(audi);
+        printInfo(bmw);
+        printInfo(kia);
+        printInfo(hyundai);
 
-        System.out.println("Марка автомобилzя " + audi.brand + "модель " + audi.model
-                + " год выпуска " + audi.productionYear + " сборка в " + audi.productionCountry
-                + " цвет " + audi.color + "  объем двигателя  " + audi.engineVolume + " литра");
-
-        System.out.println("Марка автомобиля " + bmw.brand + "модель " + bmw.model +
-                " сборка в " + bmw.productionCountry
-                + " год выпуска в  " + bmw.productionYear + " году" +
-                " цвет кузова " + bmw.color + "  объем двигателя - " + bmw.engineVolume);
-
-        System.out.println("Марка автомобиля " + kia.brand + "модель " + kia.model
-                + " год выпуска " + kia.productionYear + " сборка в " + kia.productionCountry
-                + " цвет кузова " + kia.color + "  объем двигателя - " + kia.engineVolume);
-
-        System.out.println("Марка автомобиля " + hyundai.brand + " модель " + hyundai.model +
-                " сборка в " + hyundai.productionCountry + " цвет кузова " + hyundai.color + "  объем двигателя - " + hyundai.engineVolume + "литра"
-                + " год выпуска в -" + hyundai.productionYear + " год");
+    }
+    private static void printInfo (Car car) {
+        System.out.println("Марка автомобиля " + car.getBrand() + " модель " + car.getModel() +
+                " сборка в " + car.getProductionYear()+ " цвет кузова " + car.getColor() + "  объем двигателя - " + car.getEngineVolume()
+                + "литра" + " год выпуска в -" + car.getProductionYear() + " год" + "коробка передач" + car.getTransmission() + "тип кузова"
+                + car.getBodyTape() + "регистрационный номер" + car.getRegistrationNumber()+ "количество мест" + car.getNumberOfSeats () + "признак летняя или зимняя" +car.getRubberSign());
 
 
         // - Lada Grande, 2015 год выпуска, сборка в России, желтого цвета, объем двигателя - 1,7
