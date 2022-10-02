@@ -3,11 +3,11 @@ import transport.Car;
 public class Main {
 
     public static void main(String[] args) {
-        Car lada = new Car("Lada ", "Grande", "1.7", null, "2015", "России"); lada.setRegistrationNumber("х005000х");
-        Car audi = new Car("Audi ", null, "3,0", "черный", "2020", "Германии");
-        Car bmw = new Car("BMW", "Z8", "3,0", "черный", "2021", "Германии");bmw.getNumberOfSeats();
-        Car kia = new Car("Kia ", "Sportage 4 поколение", "1.6", "красный", "2018", "Южной Корее");
-        Car hyundai = new Car(null, "Avante ", "1,6", "оранжевый", "2016", null);
+        Car lada = new Car("Lada ", "Grande", 1.7, null, 2015, "России"); lada.setRegistrationNumber("х452хх280");
+        Car audi = new Car("Audi ", null, 3.5, "черный", 2020, "Германии");
+        Car bmw = new Car("BMW", "Z8", 3.5, "черный", 2021, "Германии");
+        Car kia = new Car("Kia ", "Sportage 4 поколение", 1.6, "красный", 2018, "Южной Корее");
+        Car hyundai = new Car(null, "Avante ", 1.6, "оранжевый", 2016, null);
 
         printInfo(lada);
         printInfo(audi);
@@ -19,8 +19,10 @@ public class Main {
     private static void printInfo (Car car) {
         System.out.println("Марка автомобиля " + car.getBrand() + " модель " + car.getModel() +
                 " сборка в " + car.getProductionYear()+ " цвет кузова " + car.getColor() + "  объем двигателя - " + car.getEngineVolume()
-                + "литра" + " год выпуска в -" + car.getProductionYear() + " год" + "коробка передач" + car.getTransmission() + "тип кузова"
-                + car.getBodyTape() + "регистрационный номер" + car.getRegistrationNumber()+ "количество мест" + car.getNumberOfSeats () + "признак летняя или зимняя" +car.getRubberSign());
+                + "литра" + " год выпуска в -" + car.getProductionYear() + " год " + " коробка передач " + car.getTransmission() + " тип кузова "
+                + car.getBodyType() + " регистрационный номер " + car.getRegistrationNumber()+ " количество мест " + car.getNumberOfSeats () + " зимняя " +car.isSeasonTyres()
+        + car.getKey()+  "доступ с ключом" + car.getKey()+
+                "удаленный запусу" + "номер страховки:" + car.getInsurance());
 
 
         // - Lada Grande, 2015 год выпуска, сборка в России, желтого цвета, объем двигателя - 1,7
