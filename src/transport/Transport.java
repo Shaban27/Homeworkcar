@@ -1,11 +1,27 @@
-public class transprt {
+package transport;
+
+
+public class Transport {
 
     public String brand;
     public String model;
-    private int yearOfIssue;
-    private String productionCountry;
+    public String yearOfIssue;
+    protected String productionCountry;
     public String bodyColor;
     public int maximumMovementSpeed;
+
+    public Transport(String brand, String model, String yearOfIssue, String productionCountry, String bodyColor, int maximumMovementSpeed) {
+        this.brand = brand;
+        this.model = model;
+        this.yearOfIssue = yearOfIssue;
+        this.productionCountry = productionCountry;
+        this.bodyColor = bodyColor;
+        this.maximumMovementSpeed = maximumMovementSpeed;
+    }
+
+    public Transport(String model, String brand, String bodyColor, String yearOfIssue, String productionCountry) {
+    }
+
 
     public String getBrand() {
         return brand;
@@ -23,11 +39,11 @@ public class transprt {
         this.model = model;
     }
 
-    public int getYearOfIssue() {
+    public String getYearOfIssue() {
         return yearOfIssue;
     }
 
-    public void setYearOfIssue(int yearOfIssue) {
+    public void setYearOfIssue(String yearOfIssue) {
         this.yearOfIssue = yearOfIssue;
     }
 
@@ -55,33 +71,11 @@ public class transprt {
         this.maximumMovementSpeed = maximumMovementSpeed;
     }
 
-    public transprt(String brand, String model, int yearOfIssue, String productionCountry, String bodyColor, int maximumMovementSpeed) {
-        this.brand = brand;
-        this.model = model;
-        this.yearOfIssue = yearOfIssue;
-        this.productionCountry = productionCountry;
-        this.bodyColor = bodyColor;
-        this.maximumMovementSpeed = maximumMovementSpeed;
 
 
 
     }
-}
 
 
 
 
-        //if (model == null) {
-        //    this.model = "значение указано корректно";
-       // } else {
-       //     this.model = model;
-
-
-
-
-//- Марка
-//       - Модель
-//    - Год выпуска
-//   - Страна производства
-//  - Цвет кузова
-// - Максимальная скорость передвижения
