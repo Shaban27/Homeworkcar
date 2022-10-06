@@ -11,7 +11,7 @@ public class Car extends Transport {
 
 
     public Car(String brand,
-              String model,
+               String model,
                Double engineVolume,
                String bodyColor,
                String yearOfIssue,
@@ -26,7 +26,8 @@ public class Car extends Transport {
         this.transmission = "автомат";
            }
 
-      public void setEngineVolume(Double engineVolume) {
+
+    public void setEngineVolume(Double engineVolume) {
         this.engineVolume = engineVolume;
     }
         public void setTransmission(String transmission) {

@@ -62,14 +62,10 @@ public class Train extends Transport {
                 String numberOfWagons) {
         super(brand, model, yearOfIssue, productionCountry, maximumMovementSpeed);
          this.tripPrace = tripPrace;
-        if (travelTime == null) {
-            this.travelTime = travelTime;
-        } else {
-            this.travelTime = travelTime;
+          this.travelTime = travelTime;
             this.departureStationName = departureStationName;
             this.endingStation = endingStation;
-        }
-        if (numberOfWagons == null) {
+               if (numberOfWagons == null) {
             this.numberOfWagons = travelTime;
         } else {
             this.numberOfWagons = numberOfWagons;
