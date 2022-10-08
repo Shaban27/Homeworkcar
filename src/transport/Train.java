@@ -51,27 +51,35 @@ public class Train extends Transport {
     }
 
     public Train(String brand,
-                String model,
-                String yearOfIssue,
-                String productionCountry,
-                String maximumMovementSpeed,
-                String travelTime,
-                String departureStationName,
-                String endingStation,
-                String tripPrace,
-                String numberOfWagons) {
-        super(brand, model, yearOfIssue, productionCountry, maximumMovementSpeed);
-         this.tripPrace = tripPrace;
-          this.travelTime = travelTime;
+                 String model,
+                 String yearOfIssue,
+                 String productionCountry,
+                 String maximumMovementSpeed,
+                 String travelTime,
+                 String departureStationName,
+                 String endingStation,
+                 String tripPrace,
+                 String numberOfWagons) {
+        super (model, brand, yearOfIssue, productionCountry, maximumMovementSpeed);
+        this.tripPrace = tripPrace;
+
+            this.travelTime = travelTime;
             this.departureStationName = departureStationName;
             this.endingStation = endingStation;
-               if (numberOfWagons == null) {
-            this.numberOfWagons = travelTime;
-        } else {
-            this.numberOfWagons = numberOfWagons;
+            if (numberOfWagons == null) {
+                this.numberOfWagons = numberOfWagons;
+            } else {
+                this.numberOfWagons = numberOfWagons;
+                this.maximumMovementSpeed=maximumMovementSpeed;
 
+            }
         }
-    }}
+
+            @Override
+            public void refill () {
+                System.out.println("Нужно заправлять дизелем");
+            }
+        }
 
 
 

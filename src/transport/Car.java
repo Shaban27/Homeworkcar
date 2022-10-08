@@ -3,34 +3,28 @@ package transport;
 public class Car extends Transport {
 
 
-    private Double engineVolume;
+    private String engineVolume;
     private String transmission;
-    private final String bodyType;
+    private String bodyType;
 
-
-
-
-    public Car(String brand,
-               String model,
-               Double engineVolume,
-               String bodyColor,
-               String yearOfIssue,
-               String productionCountry) {
-        super(model, brand, bodyColor, yearOfIssue, productionCountry);
+    public Car(String brand, String model, String engineVolume, String bodyColor, String yearOfIssue, String productionCountry) {
+        super(model, brand, yearOfIssue, productionCountry, bodyColor);
         if (engineVolume == null) {
-            this.engineVolume = 1.6;
+            this.engineVolume = "1.6";
         } else {
             this.engineVolume = engineVolume;
+            this.transmission = "автомат";
+            this.bodyType = "хэтчбек";
         }
-         this.bodyType = "хэтчбек";
-        this.transmission = "автомат";
-           }
 
 
-    public void setEngineVolume(Double engineVolume) {
+    }
+
+    public void setEngineVolume(String engineVolume) {
         this.engineVolume = engineVolume;
     }
-        public void setTransmission(String transmission) {
+
+    public void setTransmission(String transmission) {
         if (transmission == null) {
             this.transmission = "автомат";
         } else {
@@ -39,7 +33,7 @@ public class Car extends Transport {
     }
 
 
-    public Double getEngineVolume() {
+    public String getEngineVolume() {
         return engineVolume;
     }
 
@@ -52,7 +46,13 @@ public class Car extends Transport {
     }
 
 
+
+        @Override
+        public void refill () {
+            System.out.println("Заправлять бензином на заправке");
+        }
     }
+
 
 
 
