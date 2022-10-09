@@ -12,7 +12,6 @@ public abstract class Transport {
 
 
 
-
     public String getBrand() {
         return brand;
     }
@@ -61,32 +60,35 @@ public abstract class Transport {
         this.maximumMovementSpeed = maximumMovementSpeed;
     }
 
-    public Transport(String brand, String model, String bodyColor, String yearOfIssue, String productionCountry) {
+    public Transport(String brand, String model, String yearOfIssue, String productionCountry, String bodyColor) {
         this.brand = brand;
         this.model = model;
-        if (yearOfIssue==null) {
+        if (yearOfIssue == null) {
             this.yearOfIssue = yearOfIssue;
-        } else{
+        } else {
             this.yearOfIssue = yearOfIssue;
         }
         if (productionCountry != null && !productionCountry.isEmpty() && !productionCountry.isBlank()) {
             this.productionCountry = productionCountry;
         } else {
-           this.productionCountry = productionCountry;
+            this.productionCountry = productionCountry;
+        }
         if (maximumMovementSpeed != null && !maximumMovementSpeed.isEmpty() && !maximumMovementSpeed.isBlank()) {
             this.maximumMovementSpeed = getMaximumMovementSpeed();
         } else {
-           this.maximumMovementSpeed = this.maximumMovementSpeed;}
-            if (bodyColor==null){
-                this.bodyColor = bodyColor;
-            } else {
-                this.bodyColor = bodyColor;
+            this.maximumMovementSpeed = this.maximumMovementSpeed;
+        }
+        if (bodyColor != null && !bodyColor.isEmpty() && !bodyColor.isBlank()) {
+            this.bodyColor = bodyColor;
+        } else {
+            this.bodyColor = bodyColor;
+
+        }
+    }
 
 
-            }
 
 
-         }}
 
     public abstract void refill();
 }

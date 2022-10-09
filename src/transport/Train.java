@@ -62,7 +62,6 @@ public class Train extends Transport {
                  String numberOfWagons) {
         super (model, brand, yearOfIssue, productionCountry, maximumMovementSpeed);
         this.tripPrace = tripPrace;
-
             this.travelTime = travelTime;
             this.departureStationName = departureStationName;
             this.endingStation = endingStation;
@@ -75,7 +74,10 @@ public class Train extends Transport {
             }
         }
 
-            @Override
+
+
+
+    @Override
             public void refill () {
                 System.out.println("Нужно заправлять дизелем");
             }

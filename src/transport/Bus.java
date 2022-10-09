@@ -2,9 +2,9 @@ package transport;
 
 public class Bus extends Transport{
 
-    public Bus(String model, String brand,  String  yearOfIssue,String productionCountry, String bodyColor, String maximumMovementSpeed) {
-        super(model, brand, productionCountry,  yearOfIssue, maximumMovementSpeed);
-        this.bodyColor = bodyColor;
+    public Bus(String brand, String model, String yearOfIssue, String bodyColor, String productionCountry, String maximumMovementSpeed) {
+        super(brand, model, yearOfIssue, bodyColor, productionCountry);
+      this.maximumMovementSpeed = maximumMovementSpeed;
     }
 
     @Override

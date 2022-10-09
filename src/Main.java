@@ -9,7 +9,7 @@ import transport.Train;
 
 public class Main {
 
-    public static <Predator> void main(String[] args) {
+    public static void main(String[] args) {
         Car lada = new Car("Lada ", "Grande", "1.7", null, "2019", "России");
         Car audi = new Car("Audi ", null, "3.5", "черный", "2020", "Германии");
         Car bmw = new Car("BMW", "Z8", "3.5", "черный", "2021", "Германии");
@@ -22,8 +22,8 @@ public class Main {
                 "скорость передвижения 270 км/ч", "поезд отходит в 10:00 ч.", " от Ленинградского вокзала",
                 "и следует до станции Ленинград-Пассажирский.", " поездки - 1700 рублей", "в поезде 8 вагонов.");
 
-        Bus bus = new Bus("Ик-008", "Икарус", "2020", "Россия", "красный", "301");
-        Bus bus1 = new Bus("ЖК-008", "Дэу", "2019", "Россия", "синий", "301");
+        Bus bus = new Bus("Ик-008", "Икарус", "2020", "красный", "Россия", "301");
+        Bus bus1 = new Bus("ЖК-008", "Дэу", "2019", "синий", "Россия", "301");
 
         Amphibians amphibians = new Amphibians("лягушка", 2, "болото");
         Amphibians amphibians1 = new Amphibians("уж пресноводный", 3, "в лесу");
